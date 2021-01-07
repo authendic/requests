@@ -10,6 +10,7 @@ ClientSetCookies	requests.go	/^func (req *Request) ClientSetCookies() {$/;"	f
 Content	requests.go	/^func (resp *Response) Content() []byte {$/;"	f
 Cookies	requests.go	/^func (resp *Response) Cookies() (cookies []*http.Cookie) {$/;"	f
 Datas	requests.go	/^type Datas map[string]string \/\/ for post form$/;"	t
+Debug	requests.go	/^type Debug int$/;"	t
 Files	requests.go	/^type Files map[string]string \/\/ name ,filename$/;"	t
 Get	requests.go	/^func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
 Get	requests.go	/^func Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
@@ -62,6 +63,7 @@ requests.ClientSetCookies	requests.go	/^func (req *Request) ClientSetCookies() {
 requests.Content	requests.go	/^func (resp *Response) Content() []byte {$/;"	f
 requests.Cookies	requests.go	/^func (resp *Response) Cookies() (cookies []*http.Cookie) {$/;"	f
 requests.Datas	requests.go	/^type Datas map[string]string \/\/ for post form$/;"	t
+requests.Debug	requests.go	/^type Debug int$/;"	t
 requests.Files	requests.go	/^type Files map[string]string \/\/ name ,filename$/;"	t
 requests.Get	requests.go	/^func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
 requests.Get	requests.go	/^func Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
