@@ -105,12 +105,11 @@ func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, er
 	// set params ?a=b&b=c
 	//set Header
 	params := []map[string]string{}
+	oldDebug := req.Debug
 
 	//reset Cookies,
 	//Client.Do can copy cookie from client.Jar to req.Header
 	delete(req.httpreq.Header, "Cookie")
-
-	oldDebug := req.Debug
 
 	for _, arg := range args {
 		switch a := arg.(type) {
@@ -363,6 +362,7 @@ func (req *Request) PostJson(origurl string, args ...interface{}) (resp *Respons
 
 	req.Header.Add("Content-Type", "application/json")
 	params := []map[string]string{}
+	oldDebug := req.Debug
 
 	//reset Cookies,
 	//Client.Do can copy cookie from client.Jar to req.Header
@@ -383,6 +383,8 @@ func (req *Request) PostJson(origurl string, args ...interface{}) (resp *Respons
 			req.httpreq.SetBasicAuth(a[0], a[1])
 		case Params:
 			params = append(params, a)
+		case Debug:
+			req.Debug = a
 		default:
 			b := new(bytes.Buffer)
 			err = json.NewEncoder(b).Encode(a)
@@ -404,6 +406,9 @@ func (req *Request) PostJson(origurl string, args ...interface{}) (resp *Respons
 	req.ClientSetCookies()
 
 	req.RequestDebug()
+	if oldDebug != req.Debug {
+		req.Debug = oldDebug
+	}
 
 	res, err := req.Client.Do(req.httpreq)
 
@@ -437,6 +442,7 @@ func (req *Request) Post(origurl string, args ...interface{}) (resp *Response, e
 	params := []map[string]string{}
 	datas := []map[string]string{} // POST
 	files := []map[string]string{} //post file
+	oldDebug := req.Debug
 
 	//reset Cookies,
 	//Client.Do can copy cookie from client.Jar to req.Header
@@ -462,6 +468,8 @@ func (req *Request) Post(origurl string, args ...interface{}) (resp *Response, e
 		case Auth:
 			// a{username,password}
 			req.httpreq.SetBasicAuth(a[0], a[1])
+		case Debug:
+			req.Debug = a
 		}
 	}
 
@@ -484,6 +492,9 @@ func (req *Request) Post(origurl string, args ...interface{}) (resp *Response, e
 	req.ClientSetCookies()
 
 	req.RequestDebug()
+	if oldDebug != req.Debug {
+		req.Debug = oldDebug
+	}
 
 	res, err := req.Client.Do(req.httpreq)
 
