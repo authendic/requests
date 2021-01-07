@@ -34,11 +34,13 @@ import (
 
 var VERSION string = "0.7"
 
+type Debug int
+
 type Request struct {
 	httpreq *http.Request
 	Header  *http.Header
 	Client  *http.Client
-	Debug   int
+	Debug   Debug
 	Cookies []*http.Cookie
 }
 
@@ -108,6 +110,8 @@ func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, er
 	//Client.Do can copy cookie from client.Jar to req.Header
 	delete(req.httpreq.Header, "Cookie")
 
+	oldDebug := req.Debug
+
 	for _, arg := range args {
 		switch a := arg.(type) {
 		// arg is Header , set to request header
@@ -123,6 +127,8 @@ func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, er
 		case Auth:
 			// a{username,password}
 			req.httpreq.SetBasicAuth(a[0], a[1])
+		case Debug:
+			req.Debug = a
 		}
 	}
 
@@ -138,6 +144,9 @@ func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, er
 	req.ClientSetCookies()
 
 	req.RequestDebug()
+	if oldDebug != req.Debug {
+		req.Debug = oldDebug
+	}
 
 	res, err := req.Client.Do(req.httpreq)
 

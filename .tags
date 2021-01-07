@@ -1,0 +1,100 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Auth	requests.go	/^type Auth []string$/;"	t
+ClearCookies	requests.go	/^func (req *Request) ClearCookies() {$/;"	f
+ClientSetCookies	requests.go	/^func (req *Request) ClientSetCookies() {$/;"	f
+Content	requests.go	/^func (resp *Response) Content() []byte {$/;"	f
+Cookies	requests.go	/^func (resp *Response) Cookies() (cookies []*http.Cookie) {$/;"	f
+Datas	requests.go	/^type Datas map[string]string \/\/ for post form$/;"	t
+Files	requests.go	/^type Files map[string]string \/\/ name ,filename$/;"	t
+Get	requests.go	/^func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+Get	requests.go	/^func Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+Header	requests.go	/^type Header map[string]string$/;"	t
+Json	requests.go	/^func (resp *Response) Json(v interface{}) error {$/;"	f
+New_Request	requests.go	/^func New_Request() *Request {$/;"	f
+Params	requests.go	/^type Params map[string]string$/;"	t
+Post	requests.go	/^func (req *Request) Post(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+Post	requests.go	/^func Post(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+PostJson	requests.go	/^func (req *Request) PostJson(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+PostJson	requests.go	/^func PostJson(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+Proxy	requests.go	/^func (req *Request) Proxy(proxyurl string) {$/;"	f
+Request	requests.go	/^type Request struct {$/;"	t
+RequestDebug	requests.go	/^func (req *Request) RequestDebug() {$/;"	f
+Requests	requests.go	/^func Requests() *Request {$/;"	f
+Response	requests.go	/^type Response struct {$/;"	t
+ResponseDebug	requests.go	/^func (resp *Response) ResponseDebug() {$/;"	f
+SaveFile	requests.go	/^func (resp *Response) SaveFile(filename string) error {$/;"	f
+SetCookie	requests.go	/^func (req *Request) SetCookie(cookie *http.Cookie) {$/;"	f
+SetTimeout	requests.go	/^func (req *Request) SetTimeout(n time.Duration) {$/;"	f
+TestGet	requests_test.go	/^func TestGet(t *testing.T) {$/;"	f
+TestPost	requests_test.go	/^func TestPost(t *testing.T) {$/;"	f
+TestPostGet	requests_test.go	/^func TestPostGet(t *testing.T) {$/;"	f
+TestPostJson	requests_test.go	/^func TestPostJson(t *testing.T) {$/;"	f
+TestTimeout	requests_test.go	/^func TestTimeout(t *testing.T) {$/;"	f
+Text	requests.go	/^func (resp *Response) Text() string {$/;"	f
+VERSION	requests.go	/^var VERSION string = "0.7"$/;"	v
+addQueryParams	requests.go	/^func addQueryParams(parsedURL *url.URL, parsedQuery url.Values) string {$/;"	f
+buildFilesAndForms	requests.go	/^func (req *Request) buildFilesAndForms(files []map[string]string, datas []map[string]string) {$/;"	f
+buildForms	requests.go	/^func (req *Request) buildForms(datas ...map[string]string) (Forms url.Values) {$/;"	f
+buildURLParams	requests.go	/^func buildURLParams(userURL string, params ...map[string]string) (string, error) {$/;"	f
+main	examples/get1.go	/^func main (){$/;"	f
+main	examples/get1.go	/^package main$/;"	p
+main	examples/get_auth.go	/^func main (){$/;"	f
+main	examples/get_auth.go	/^package main$/;"	p
+main	examples/get_set_header.go	/^func main (){$/;"	f
+main	examples/get_set_header.go	/^package main$/;"	p
+main	examples/post1.go	/^func main (){$/;"	f
+main	examples/post1.go	/^package main$/;"	p
+main.main	examples/get1.go	/^func main (){$/;"	f
+main.main	examples/get_auth.go	/^func main (){$/;"	f
+main.main	examples/get_set_header.go	/^func main (){$/;"	f
+main.main	examples/post1.go	/^func main (){$/;"	f
+openFile	requests.go	/^func openFile(filename string) *os.File {$/;"	f
+requests	requests.go	/^package requests$/;"	p
+requests	requests_test.go	/^package requests$/;"	p
+requests.Auth	requests.go	/^type Auth []string$/;"	t
+requests.ClearCookies	requests.go	/^func (req *Request) ClearCookies() {$/;"	f
+requests.ClientSetCookies	requests.go	/^func (req *Request) ClientSetCookies() {$/;"	f
+requests.Content	requests.go	/^func (resp *Response) Content() []byte {$/;"	f
+requests.Cookies	requests.go	/^func (resp *Response) Cookies() (cookies []*http.Cookie) {$/;"	f
+requests.Datas	requests.go	/^type Datas map[string]string \/\/ for post form$/;"	t
+requests.Files	requests.go	/^type Files map[string]string \/\/ name ,filename$/;"	t
+requests.Get	requests.go	/^func (req *Request) Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+requests.Get	requests.go	/^func Get(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+requests.Header	requests.go	/^type Header map[string]string$/;"	t
+requests.Json	requests.go	/^func (resp *Response) Json(v interface{}) error {$/;"	f
+requests.New_Request	requests.go	/^func New_Request() *Request {$/;"	f
+requests.Params	requests.go	/^type Params map[string]string$/;"	t
+requests.Post	requests.go	/^func (req *Request) Post(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+requests.Post	requests.go	/^func Post(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+requests.PostJson	requests.go	/^func (req *Request) PostJson(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+requests.PostJson	requests.go	/^func PostJson(origurl string, args ...interface{}) (resp *Response, err error) {$/;"	f
+requests.Proxy	requests.go	/^func (req *Request) Proxy(proxyurl string) {$/;"	f
+requests.Request	requests.go	/^type Request struct {$/;"	t
+requests.RequestDebug	requests.go	/^func (req *Request) RequestDebug() {$/;"	f
+requests.Requests	requests.go	/^func Requests() *Request {$/;"	f
+requests.Response	requests.go	/^type Response struct {$/;"	t
+requests.ResponseDebug	requests.go	/^func (resp *Response) ResponseDebug() {$/;"	f
+requests.SaveFile	requests.go	/^func (resp *Response) SaveFile(filename string) error {$/;"	f
+requests.SetCookie	requests.go	/^func (req *Request) SetCookie(cookie *http.Cookie) {$/;"	f
+requests.SetTimeout	requests.go	/^func (req *Request) SetTimeout(n time.Duration) {$/;"	f
+requests.TestGet	requests_test.go	/^func TestGet(t *testing.T) {$/;"	f
+requests.TestPost	requests_test.go	/^func TestPost(t *testing.T) {$/;"	f
+requests.TestPostGet	requests_test.go	/^func TestPostGet(t *testing.T) {$/;"	f
+requests.TestPostJson	requests_test.go	/^func TestPostJson(t *testing.T) {$/;"	f
+requests.TestTimeout	requests_test.go	/^func TestTimeout(t *testing.T) {$/;"	f
+requests.Text	requests.go	/^func (resp *Response) Text() string {$/;"	f
+requests.VERSION	requests.go	/^var VERSION string = "0.7"$/;"	v
+requests.addQueryParams	requests.go	/^func addQueryParams(parsedURL *url.URL, parsedQuery url.Values) string {$/;"	f
+requests.buildFilesAndForms	requests.go	/^func (req *Request) buildFilesAndForms(files []map[string]string, datas []map[string]string) {$/;"	f
+requests.buildForms	requests.go	/^func (req *Request) buildForms(datas ...map[string]string) (Forms url.Values) {$/;"	f
+requests.buildURLParams	requests.go	/^func buildURLParams(userURL string, params ...map[string]string) (string, error) {$/;"	f
+requests.openFile	requests.go	/^func openFile(filename string) *os.File {$/;"	f
+requests.setBodyBytes	requests.go	/^func (req *Request) setBodyBytes(Forms url.Values) {$/;"	f
+requests.setBodyRawBytes	requests.go	/^func (req *Request) setBodyRawBytes(read io.ReadCloser) {$/;"	f
+setBodyBytes	requests.go	/^func (req *Request) setBodyBytes(Forms url.Values) {$/;"	f
+setBodyRawBytes	requests.go	/^func (req *Request) setBodyRawBytes(read io.ReadCloser) {$/;"	f
